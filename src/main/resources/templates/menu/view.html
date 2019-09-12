@@ -16,7 +16,7 @@
                 <li th:each="cheese : ${menu.cheeses}" th:text="${cheese.name}"></li>
             </ul>
 
-            <button type="button" class="btn btn-secondary"><a th:href="'/menu/add-item/' + ${menu.id}" style="color: white;">Add Cheese</a></button>
+            <button type="button" class="btn btn-success"><a th:href="'/menu/add-item/' + ${menu.id}" style="color: white;">Add Cheese</a></button>
 
         </div>
     </body>
