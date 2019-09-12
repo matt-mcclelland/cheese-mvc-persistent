@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body>
+    <nav th:replace="fragments :: page-header"></nav>
+
+    <div class="container body-content">
+        <h1 th:text="${title}">Default Title</h1>
+
+<!--        <button type="button" class="btn btn-success"><a href="/category/add" style="color: white;">Add Category</a></button>-->
+
+        <ul>
+            <li th:each="category : ${categories}"
+                th:text="${category.getName()}"></li>
+        </ul>
+
+        <button type="button" class="btn btn-success"><a href="/category/add" style="color: white;">Add Category</a></button>
+
+    </div>
+</body>
+</html>
